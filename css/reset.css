@@ -1,0 +1,50 @@
+/* ユーザーエージェントスタイルシートのリセット */
+*{
+  box-sizing: border-box;/* width & padding 加算しない*/
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', 'Sawarabi Gothic',sans-serif;
+}
+
+body { 
+  /*(2022年に最適なfont-familyの書き方) https://ics.media/entry/200317/*/
+  font-family: "Helvetica Neue", /*欧文*/
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  vertical-align: bottom;
+}
+
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+/* スマートフォンでのズーム機能をオフにするため */
+/*iphone表單文字小於16px會啟動zoom,畫面會放大*/
+input,button,textarea,select,option{
+  font-size: 16px;
+  /* 
+  取消瀏覽器預設裝飾
+  フォーム関連要素のデフォルトスタイルを初期化する
+  -webkit-appearance: none;
+  */
+}
+
+a[href^="tel:"]{ /*隱藏可點擊的外觀*/
+  text-decoration: none;
+  cursor: default;
+}
